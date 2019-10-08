@@ -1,0 +1,382 @@
+#name=repeat
+#displayname=Repeat Sequences
+#version=2019.08.22
+#column={"index": 0, "name": "uid", "title": "UID", "type": "int", "categories": [], "width": 60, "desc": null, "hidden": true, "category": null, "filterable": false, "link_format": null, "genesummary": false}
+#column={"index": 1, "name": "repeatclass", "title": "Repeat Class", "type": "string", "categories": [], "width": 100, "desc": null, "hidden": false, "category": null, "filterable": false, "link_format": null, "genesummary": false}
+#column={"index": 2, "name": "repeatfamily", "title": "Repeat Family", "type": "string", "categories": [], "width": 100, "desc": null, "hidden": true, "category": null, "filterable": false, "link_format": null, "genesummary": false}
+#column={"index": 3, "name": "repeatname", "title": "Repeat Name", "type": "string", "categories": [], "width": 110, "desc": null, "hidden": true, "category": null, "filterable": true, "link_format": null, "genesummary": false}
+#no_aggregate=
+#UID	Repeat Class	Repeat Family	Repeat Name
+1			
+2	Simple_repeat	Simple_repeat	(TTTC)n
+3			
+4			
+5			
+6			
+7			
+8			
+9			
+10			
+11	Simple_repeat	Simple_repeat	(TAACCC)n
+12			
+13			
+14			
+15			
+16			
+17			
+18			
+19			
+20			
+21			
+22			
+23			
+24			
+25			
+26			
+27			
+28			
+29			
+30			
+31	SINE	Alu	AluSq2
+32	SINE	Alu	AluSq2
+33			
+34			
+35			
+36			
+37			
+38			
+39			
+40			
+41			
+42			
+43			
+44			
+45			
+46			
+47			
+48			
+49			
+50			
+51			
+52			
+53			
+54			
+55			
+56			
+57			
+58			
+59	Low_complexity	Low_complexity	A-rich
+60			
+61			
+62			
+63			
+64			
+65			
+66	Simple_repeat	Simple_repeat	(CGCCC)n
+67			
+68			
+69			
+70			
+71			
+72			
+73			
+74			
+75			
+76			
+77			
+78			
+79	LINE	L1	L1MB3
+80	SINE	Alu	AluJo
+81			
+82			
+83			
+84	Satellite	Satellite	MSR1
+85	LTR	ERVL-MaLR	MLT1E1A
+86	LTR,SINE	ERVL-MaLR,Alu	MLT1E1A,AluSx
+87	SINE	Alu	AluSx
+88			
+89			
+90	LTR	ERVL	ERV3-16A3_I-int
+91			
+92			
+93			
+94			
+95			
+96			
+97			
+98			
+99	Low_complexity	Low_complexity	A-rich
+100			
+101			
+102			
+103			
+104			
+105			
+106			
+107			
+108			
+109			
+110			
+111			
+112			
+113	SINE	MIR	MIR3
+114			
+115			
+116			
+117			
+118			
+119			
+120			
+121			
+122			
+123			
+124			
+125			
+126			
+127			
+128			
+129			
+130			
+131			
+132			
+133			
+134			
+135			
+136			
+137			
+138	Simple_repeat	Simple_repeat	(ATCACA)n
+139			
+140			
+141			
+142			
+143			
+144			
+145			
+146			
+147			
+148			
+149			
+150			
+151			
+152			
+153			
+154			
+155			
+156			
+157			
+158			
+159			
+160			
+161			
+162			
+163			
+164			
+165			
+166			
+167			
+168			
+169			
+170			
+171			
+172			
+173			
+174			
+175			
+176			
+177			
+178			
+179			
+180			
+181			
+182	LINE	L2	L2a
+183			
+184			
+185			
+186	Simple_repeat	Simple_repeat	(GAC)n
+187			
+188			
+189			
+190			
+191			
+192			
+193			
+194			
+195			
+196			
+197			
+198			
+199	Simple_repeat	Simple_repeat	(CAG)n
+200			
+201			
+202	LINE	L1	L1PA15-16
+203	Low_complexity	Low_complexity	GA-rich
+204			
+205	SINE	Alu	AluY
+206	SINE	Alu	AluY
+207			
+208			
+209			
+210			
+211	LTR	ERV1	LTR10A
+212			
+213			
+214			
+215			
+216			
+217			
+218			
+219			
+220			
+221			
+222			
+223			
+224			
+225			
+226			
+227			
+228			
+229			
+230			
+231			
+232			
+233			
+234			
+235			
+236			
+237			
+238			
+239			
+240			
+241			
+242			
+243			
+244			
+245			
+246			
+247			
+248			
+249			
+250	Simple_repeat	Simple_repeat	(CTGCGG)n
+251			
+252			
+253			
+254			
+255			
+256			
+257			
+258			
+259			
+260			
+261			
+262			
+263			
+264			
+265			
+266			
+267			
+268			
+269			
+270			
+271			
+272			
+273			
+274			
+275			
+276			
+277			
+278			
+279	Simple_repeat	Simple_repeat	(TGC)n
+280	Simple_repeat	Simple_repeat	(TGC)n
+281			
+282			
+283			
+284			
+285			
+286			
+287			
+288			
+289			
+290			
+291			
+292			
+293			
+294			
+295			
+296			
+297			
+298			
+299			
+300			
+301			
+302			
+303			
+304			
+305			
+306			
+307			
+308			
+309			
+310			
+311			
+312			
+313			
+314			
+315			
+316			
+317			
+318			
+319			
+320			
+321			
+322			
+323			
+324			
+325			
+326			
+327	LINE	L1	L1MDa
+328			
+329			
+330			
+331			
+332	Low_complexity	Low_complexity	A-rich
+333	SINE	Alu	AluSp
+334	SINE	Alu	AluSp
+335	SINE	Alu	AluSz
+336			
+337			
+338			
+339			
+340			
+341			
+342			
+343			
+344			
+345			
+346			
+347			
+348			
+349			
+350			
+351			
+352			
+353			
+354			
+355	Simple_repeat	Simple_repeat	(CCG)n
+356			
+357			
+358			
+359			
+360	Simple_repeat	Simple_repeat	(CCG)n
+361			
+362			
+363			
+364			
+365			
+366			
+367			
+368			
+369			
+370			
+371			
+372			
+373			

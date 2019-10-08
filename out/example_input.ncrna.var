@@ -1,0 +1,15 @@
+#name=ncrna
+#displayname=ncRNA
+#version=2019.08.19
+#column={"index": 0, "name": "uid", "title": "UID", "type": "int", "categories": [], "width": 60, "desc": null, "hidden": true, "category": null, "filterable": false, "link_format": null, "genesummary": false}
+#column={"index": 1, "name": "ncrnaclass", "title": "Class", "type": "string", "categories": [], "width": 70, "desc": null, "hidden": false, "category": null, "filterable": false, "link_format": null, "genesummary": false}
+#column={"index": 2, "name": "ncrnaname", "title": "Name", "type": "string", "categories": [], "width": 70, "desc": null, "hidden": false, "category": null, "filterable": true, "link_format": null, "genesummary": false}
+#no_aggregate=
+#UID	Class	Name
+47	snRNA	U6
+101	tRNA	His
+111	miRNA	hsa-mir-147b
+112	miRNA	hsa-mir-147b
+130	lincRNA	TCONS_l2_00011626:1
+211	lincRNA,lincRNA,lincRNA	TCONS_l2_00014914:1,TCONS_l2_00015978:1,TCONS_l2_00014916:1
+358	rRNA	5S
