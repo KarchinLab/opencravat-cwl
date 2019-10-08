@@ -6,3 +6,4 @@ mdir:
   path: /home/kyle/mdir
 annotators:
   - clinvar
+  - hgvs
