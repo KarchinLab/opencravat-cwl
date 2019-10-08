@@ -4,3 +4,5 @@ input:
 mdir:
   class: Directory
   path: /home/kyle/mdir
+annotators:
+  - clinvar

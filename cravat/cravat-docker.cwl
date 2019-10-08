@@ -21,7 +21,11 @@ inputs:
       position: 3
       prefix: -d
     default: .
-
+  annotators:
+    type: string[]?
+    inputBinding:
+      prefix: -a
+      position: 4
 outputs:
   db:
     type: File
