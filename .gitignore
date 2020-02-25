@@ -1,2 +1,5 @@
 **.sqlite
 **.swp
+mdir/**
+out/**
+modules/**
