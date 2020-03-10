@@ -26,4 +26,7 @@ for module in "${modules[@]}"; do
     echo "Unzipping $module"
     tar -xzf $module -C $mdir
 done
+echo "TMPDIR = $TMPDIR"
+export TMPDIR=/tmp
+echo "TMPDIR = $TMPDIR"
 realoc $@
