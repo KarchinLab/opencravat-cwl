@@ -5,7 +5,7 @@ class: CommandLineTool
 baseCommand: oc
 hints:
   DockerRequirement:
-    dockerImageId: karchinlab/opencravat-cwl
+    dockerPull: karchinlab/opencravat-cwl
 inputs:
   modules:
     type: File[]?
