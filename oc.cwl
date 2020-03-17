@@ -5,18 +5,13 @@ class: CommandLineTool
 baseCommand: oc
 hints:
   DockerRequirement:
-    dockerImageId: oc
+    dockerImageId: karchinlab/opencravat-cwl
 inputs:
   modules:
     type: File[]?
     inputBinding:
       position: 1
       prefix: --modules
-  modulesDir:
-    type: Directory
-    inputBinding:
-      position: 1
-      prefix: --modules-dir
   subcommand:
     type: string
     inputBinding:
