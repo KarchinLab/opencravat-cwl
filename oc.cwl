@@ -14,8 +14,9 @@ inputs:
       prefix: --modules
   modulesDir:
     type: Directory
-    position: 1
-    prefix: --modules-dir
+    inputBinding:
+      position: 1
+      prefix: --modules-dir
   subcommand:
     type: string
     inputBinding:
