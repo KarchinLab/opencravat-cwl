@@ -13,12 +13,19 @@ OC-CWL module archives are a .tgz archive of an oc modules directory containing 
 
 Some example module archives are temporarily available [here](https://files.kylemoad.com/public/occwl/modules)
 
-## Running with CWL
+## Running the tool
 
 From the above link, place `base.tgz`, `clinvar.tgz`, and `go.tgz` into the `modules` directory, then run
 
 ```
 cwl-runner oc.cwl job.cwl
+```
+
+## Running the workflow
+From the above link, place `base.tgz`, `clinvar.tgz`, and `go.tgz` into the `modules` directory, then run
+
+```
+cwl-runner oc-workflow.cwl job.cwl
 ```
 
 # Running without CWL
