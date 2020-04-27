@@ -18,7 +18,7 @@ outputs:
     outputSource: oc/db
 steps:
   oc:
-    run: oc.cwl
+    run: /oc.cwl
     in:
       modules: modules
       input: input
