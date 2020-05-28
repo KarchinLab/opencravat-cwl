@@ -20,13 +20,25 @@ while [[ $# -gt 0 ]] && [[ $1 != 'run' ]]; do
             fi
     esac
 done
-mdir=`realoc config md ./mdir`
-echo "mdir = $mdir"
+mdir=`oc config md ./mdir`
+echo "mdir=$mdir"
+
+# Unzip in parallel
+echo 'Unzip modules in parallel'
+unzipProcs=()
 for module in "${modules[@]}"; do
     echo "Unzipping $module"
-    tar -xzf $module -C $mdir
+    tar -xzf $module -C $mdir &
+    unzipProcs+=($!)
 done
+# wait for all unzips
+for pid in ${unzipProcs[*]}; do
+    echo "wait for pid $pid"
+    wait $pid
+done
+echo 'Done unzipping'
+oc module ls -i
 echo "TMPDIR = $TMPDIR"
 export TMPDIR=/tmp
 echo "TMPDIR = $TMPDIR"
-realoc $@
+oc $@

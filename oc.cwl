@@ -2,7 +2,7 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: oc
+baseCommand: ocwrapper
 hints:
   DockerRequirement:
     dockerPull: karchinlab/opencravat-cwl
@@ -33,6 +33,12 @@ inputs:
       position: 5
       prefix: -l
     default: hg38
+  endat:
+    type: string
+    inputBinding:
+      position: 6
+      prefix: --endat
+    default: postaggregator
 outputs:
   db:
     type: File

@@ -9,7 +9,6 @@ VOLUME /tmp/modules
 RUN oc config md /tmp/mdir
 RUN mv /usr/local/lib/python3.6/site-packages/cravat/conf/cravat-system.yml /tmp/cravat-system.yml && \
     ln -s /tmp/cravat-system.yml /usr/local/lib/python3.6/site-packages/cravat/conf/cravat-system.yml
-RUN mv /usr/local/bin/oc /usr/local/bin/realoc
-COPY oc.sh /usr/local/bin/oc
-RUN chmod +x /usr/local/bin/oc
+COPY oc.sh /usr/local/bin/ocwrapper
+RUN chmod +x /usr/local/bin/ocwrapper
 WORKDIR /tmp/job
