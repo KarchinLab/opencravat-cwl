@@ -24,7 +24,7 @@ outputs:
     outputSource: oc/log
   err:
     type: File
-    oc/err
+    outputSource: oc/err
 steps:
   oc:
     run: /oc/oc.cwl
