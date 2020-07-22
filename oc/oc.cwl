@@ -3,13 +3,13 @@
 cwlVersion: v1.0
 class: CommandLineTool
 requirements:
-  - class: ShellCommandRequirement
-  - class: EnvVarRequirement
-    envDef:
-      TMPDIR: /tmp
+- class: ShellCommandRequirement
+- class: EnvVarRequirement
+  envDef:
+    TMPDIR: /tmp
 hints:
-  DockerRequirement:
-    dockerPull: karchinlab/opencravat
+- class: DockerRequirement
+  dockerPull: karchinlab/opencravat
 baseCommand: ['oc','run']
 arguments:
 - prefix: -d

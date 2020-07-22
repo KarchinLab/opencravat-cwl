@@ -4,10 +4,10 @@ cwlVersion: v1.1
 class: CommandLineTool
 baseCommand: oc-install-modules
 requirements:
-  DockerRequirement:
-    dockerPull: karchinlab/opencravat-cwl-install
-  NetworkAccess: 
-    networkAccess: true
+- class: DockerRequirement
+  dockerPull: karchinlab/opencravat-cwl-install
+- class: NetworkAccess
+  networkAccess: true
 inputs:
   modules:
     type: string[]?
