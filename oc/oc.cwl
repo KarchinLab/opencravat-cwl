@@ -7,7 +7,6 @@ requirements:
     class: ShellCommandRequirement
 hints:
   DockerRequirement:
-    #dockerImageId: ocrun
     dockerPull: karchinlab/opencravat:2.0.1
 baseCommand: ['oc','run']
 inputs:
@@ -31,14 +30,14 @@ inputs:
       shellQuote: false
     default: hg38
   outdir:
-    type: string
+    type: string?
     inputBinding:
       prefix: -d
       position: 4
       shellQuote: false
     default: .
   endat:
-    type: string
+    type: string?
     inputBinding:
       prefix: --endat
       position: 5
