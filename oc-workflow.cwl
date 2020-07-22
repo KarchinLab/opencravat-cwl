@@ -3,24 +3,31 @@
 cwlVersion: v1.0
 class: Workflow
 inputs:
-  modules:
-    type: File[]?
+  modulesDirectory:
+    type: Directory
     inputBinding:
       position: 1
-      prefix: --modules
   input:
-    type: File?
+    type: File
     inputBinding:
-      position: 3
+      position: 2
 outputs:
   db:
     type: File
     outputSource: oc/db
+  log:
+    type: File
+    outputSource: oc/log
+  err:
+    type: File
+    oc/err
 steps:
   oc:
-    run: /oc.cwl
+    run: /oc/oc.cwl
     in:
-      modules: modules
+      modulesDirectory: modulesDirectory
       input: input
     out: 
-    - db 
+    - db
+    - log
+    - err 

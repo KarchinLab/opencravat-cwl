@@ -1,2 +1,4 @@
-modules/**
+**/oc-modules
 **.sqlite
+**.log
+**.err
