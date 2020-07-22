@@ -5,7 +5,7 @@ class: CommandLineTool
 baseCommand: oc-install-modules
 requirements:
   DockerRequirement:
-    dockerImageId: ocinstall
+    dockerPull: karchinlab/opencravat-cwl-install
   NetworkAccess: 
     networkAccess: true
 inputs:
