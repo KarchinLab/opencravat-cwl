@@ -11,6 +11,10 @@ inputs:
     type: File
     inputBinding:
       position: 2
+  genome:
+    type: string
+    inputBinding:
+      position: 3
 outputs:
   db:
     type: File
