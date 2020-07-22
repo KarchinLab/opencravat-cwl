@@ -9,7 +9,7 @@ requirements:
       TMPDIR: /tmp
 hints:
   DockerRequirement:
-    dockerPull: karchinlab/opencravat:2.0.1
+    dockerPull: karchinlab/opencravat
 baseCommand: ['oc','run']
 arguments:
 - prefix: -d
