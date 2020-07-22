@@ -3,12 +3,21 @@
 cwlVersion: v1.0
 class: CommandLineTool
 requirements:
-  ShellCommandRequirement:
-    class: ShellCommandRequirement
+  - class: ShellCommandRequirement
+  - class: EnvVarRequirement
+    envDef:
+      TMPDIR: /tmp
 hints:
   DockerRequirement:
     dockerPull: karchinlab/opencravat:2.0.1
 baseCommand: ['oc','run']
+arguments:
+- prefix: -d
+  valueFrom: '.'
+  shellQuote: false
+- prefix: --endat
+  valueFrom: postaggregator
+  shellQuote: false
 inputs:
   input:
     type: File
@@ -23,26 +32,16 @@ inputs:
       position: 2
       shellQuote: false
   genome:
-    type: string
+    type:
+      type: enum
+      symbols:
+      - hg38
+      - hg19
     inputBinding:
       prefix: -l
       position: 3
       shellQuote: false
     default: hg38
-  outdir:
-    type: string?
-    inputBinding:
-      prefix: -d
-      position: 4
-      shellQuote: false
-    default: .
-  endat:
-    type: string?
-    inputBinding:
-      prefix: --endat
-      position: 5
-      shellQuote: false
-    default: postaggregator
 
 outputs:
   db:
