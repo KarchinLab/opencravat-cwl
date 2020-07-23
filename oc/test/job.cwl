@@ -1,6 +1,6 @@
 modulesDirectory:
   class: Directory
   path: oc-modules
-input:
+variants:
   class: File
   path: example_input

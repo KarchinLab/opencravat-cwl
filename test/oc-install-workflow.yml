@@ -1,0 +1,7 @@
+variants:
+  class: File
+  path: example_input
+genome: hg38
+modulesDirectory:
+  class: Directory
+  path: oc-modules
