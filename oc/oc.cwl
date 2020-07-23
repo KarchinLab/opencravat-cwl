@@ -3,7 +3,6 @@
 cwlVersion: v1.0
 class: CommandLineTool
 requirements:
-- class: ShellCommandRequirement
 # Set TMPDIR to /tmp. If it's set automatically, when python's multiprocessing
 # creates a socket in TMPDIR, the path will be too long for UNIX.
 # Similar issue: https://github.com/broadinstitute/cromwell/issues/3647
@@ -14,48 +13,36 @@ hints:
 - class: DockerRequirement
   dockerPull: karchinlab/opencravat
 baseCommand: ['oc','run']
-arguments:
-- prefix: -d
-  valueFrom: '.'
-  shellQuote: false
-- prefix: --endat
-  valueFrom: postaggregator
-  shellQuote: false
 inputs:
-  input:
-    type: File
-    inputBinding:
-      position: 1
-      shellQuote: false
-  modulesDirectory:
-    type: Directory
-    inputBinding:
-      prefix: '--system-option modules_dir='
-      separate: false
-      position: 2
-      shellQuote: false
+  variants: File
+  modulesDirectory: Directory
   genome:
     type:
       type: enum
       symbols:
       - hg38
       - hg19
-    inputBinding:
-      prefix: -l
-      position: 3
-      shellQuote: false
     default: hg38
-
+arguments:
+- $(inputs.variants.path)
+- prefix: -l
+  valueFrom: $(inputs.genome)
+- prefix: -d
+  valueFrom: '.'
+- prefix: --endat
+  valueFrom: postaggregator
+- prefix: --system-option
+  valueFrom: modules_dir=$(inputs.modulesDirectory.path)
 outputs:
   db:
     type: File
     outputBinding:
-      glob: $(inputs.input.basename).sqlite
+      glob: $(inputs.variants.basename).sqlite
   log:
     type: File
     outputBinding:
-      glob: $(inputs.input.basename).log
+      glob: $(inputs.variants.basename).log
   err:
     type: File
     outputBinding:
-      glob: $(inputs.input.basename).err
+      glob: $(inputs.variants.basename).err
