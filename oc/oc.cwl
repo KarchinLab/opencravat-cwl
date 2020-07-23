@@ -15,7 +15,7 @@ hints:
 baseCommand: ['oc','run']
 inputs:
   variants: File
-  modulesDirectory: Directory
+  modules: Directory
   genome:
     type:
       type: enum
@@ -32,7 +32,7 @@ arguments:
 - prefix: --endat
   valueFrom: postaggregator
 - prefix: --system-option
-  valueFrom: modules_dir=$(inputs.modulesDirectory.path)
+  valueFrom: modules_dir=$(inputs.modules.path)
 outputs:
   db:
     type: File

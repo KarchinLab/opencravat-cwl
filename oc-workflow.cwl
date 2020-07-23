@@ -3,22 +3,20 @@
 cwlVersion: v1.0
 class: Workflow
 inputs:
-  input:
-    type: File
+  variants: File
+  modules: Directory
   genome:
     type:
       type: enum
       symbols:
       - hg38
       - hg19
-  modulesDirectory:
-    type: Directory
 steps:
   oc:
     run: oc/oc.cwl
     in:
-      modulesDirectory: modulesDirectory
-      input: input
+      modules: modules
+      variants: variants
       genome: genome
     out: 
     - db
