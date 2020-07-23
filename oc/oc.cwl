@@ -4,6 +4,9 @@ cwlVersion: v1.0
 class: CommandLineTool
 requirements:
 - class: ShellCommandRequirement
+# Set TMPDIR to /tmp. If it's set automatically, when python's multiprocessing
+# creates a socket in TMPDIR, the path will be too long for UNIX.
+# Similar issue: https://github.com/broadinstitute/cromwell/issues/3647
 - class: EnvVarRequirement
   envDef:
     TMPDIR: /tmp
