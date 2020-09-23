@@ -11,7 +11,7 @@ requirements:
     TMPDIR: /tmp
 hints:
 - class: DockerRequirement
-  dockerPull: karchinlab/opencravat
+  dockerPull: karchinlab/opencravat:2.1.1-cf
 baseCommand: ['oc','run']
 inputs:
   variants: File
